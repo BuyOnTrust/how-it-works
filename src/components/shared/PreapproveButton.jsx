@@ -5,17 +5,26 @@ const PreapproveButton = ({ styles }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: styles.approvalButtonWidth,
-        height: styles.approvalButtonHeight,
-        // backgroundColor: styles.white(),
+        minWidth: "100vw",
         fontWeight: "bold",
-        padding: "0px 20px",
+        padding: "20px",
         boxSizing: "border-box"
     };
 
+    const buttonStyle = {
+        width: styles.approvalButtonWidth,
+        height: styles.approvalButtonHeight,
+        backgroundColor: "rgb(35, 160, 221)",
+        borderRadius: 50,
+        textTransform: "uppercase",
+        color: styles.white(),
+        fontSize: "1rem",
+        fontWeight: "bold"
+    }
+
     return (
         <div style={buttonContainerStyle}>
-            <button>Im a button</button>
+            <button style={buttonStyle}>Click here to get pre-qualified</button>
         </div>
     )
 }

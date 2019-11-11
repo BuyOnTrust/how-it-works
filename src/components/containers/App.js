@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Hero from './Hero';
+import BrandBar from './BrandBar';
+import HowTo from './HowTo';
 
 class App extends Component {
 
@@ -37,15 +39,16 @@ class App extends Component {
       topBarHeight: 50,
       footerMenuHeight: 50,
       showHeaderPhone: windowWidth < 500,
-      approvalButtonWidth: "300px",
-      approvalButtonHeight: "100%",
-      showHeroPhone: windowWidth > 500
+      approvalButtonWidth: windowWidth < 500 ? "90vw" : "350px",
+      approvalButtonHeight: 60,
+      showHeroPhone: windowWidth > 500,
+      isMobile: windowWidth < 500
     };
 
     return (
       <div className="App"
         style={{
-          backgroundColor: styles.black(0.05),
+          backgroundColor: styles.white(),
           minHeight: "100vh",
           minWidth: "100vw",
           position: "relative"
@@ -53,6 +56,8 @@ class App extends Component {
       >
         <Header styles={styles} />
         <Hero styles={styles} />
+        <BrandBar styles={styles} />
+        <HowTo styles={styles} />
       </div>
     );
   }

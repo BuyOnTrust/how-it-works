@@ -1,8 +1,8 @@
 import React from 'react';
-import Phone from '../../shared/Phone';
+import Phone from '../shared/Phone';
 import ReactSVG from 'react-svg';
 
-import BOT_logo from '../../../assets/logos/BOT_logo.svg';
+import BOT_logo from '../../assets/logos/BOT_logo.svg';
 
 const Header = ({styles}) => {
     const topBarStyle = {
@@ -15,7 +15,6 @@ const Header = ({styles}) => {
         height: styles.topBarHeight,
         maxWidth: "100vw",
         backgroundColor: styles.white(),
-        borderBottom: `1px solid ${styles.black(0.1)}`,
         fontWeight: "bold",
         padding: "0px 20px",
         boxSizing: "border-box"

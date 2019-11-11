@@ -1,11 +1,12 @@
 import React from 'react';
 
 import ReactSVG from 'react-svg';
-import PreapproveButton from '../../shared/PreapproveButton';
-import HeroPhone from '../../shared/HeroPhone';
+import PreapproveButton from '../shared/PreapproveButton';
+import HeroPhone from '../shared/HeroPhone';
 
-import down_carrot from '../../../assets/icons/down_carrot.svg';
-import BB_logo from '../../../assets/logos/BB_logo.svg';
+import down_carrot from '../../assets/icons/down_carrot.svg';
+import BB_logo from '../../assets/logos/BB_logo.svg';
+import hero_img from '../../assets/images/hero_img.png';
 
 const Hero = ({ styles }) => {
     const heroStyle = {        
@@ -20,14 +21,21 @@ const Hero = ({ styles }) => {
         textAlign: "center",
         fontWeight: "600",
         fontSize: "1.2rem",
-        paddingTop: "10px"
+        padding: "10px 0"
     };
 
     const lowerText = {
         textAlign: "center",
         fontWeight: "600",
         fontSize: "1.4rem",
-        textTransform: "uppercase"
+        textTransform: "uppercase",
+        marginTop: "10px",
+        marginBottom:"-10px"
+    };
+
+    const heroImg = {
+        width: '90vw',
+        padding: '20px 0'
     };
 
     return (
@@ -56,9 +64,7 @@ const Hero = ({ styles }) => {
             />
             <PreapproveButton styles={styles} />
             {styles.showHeroPhone ? (<HeroPhone />) : ('')}
-            <div>
-                Stuff Image
-            </div>
+            <img src={hero_img} alt='hero-collage' style={heroImg} />
         </div>
     )
 }
