@@ -41,9 +41,10 @@ to start your local development server. Once compiled, the application can be vi
 
 ## Deploy
 
-This script will run a fresh build, then deploy it to our S3 bucket incharge of hosting the webpage.
+To deploy, first run a fresh build, then deploy it to our S3 bucket incharge of hosting the webpage.
 
 ```bash
+yarn build &&
 yarn deploy
 ```
 
