@@ -3,6 +3,7 @@ import Header from './Header';
 import Hero from './Hero';
 import BrandBar from './BrandBar';
 import HowTo from './HowTo';
+import Benefits from './Benefits';
 
 class App extends Component {
 
@@ -58,6 +59,7 @@ class App extends Component {
         <Hero styles={styles} />
         <BrandBar styles={styles} />
         <HowTo styles={styles} />
+        <Benefits styles={styles} />
       </div>
     );
   }

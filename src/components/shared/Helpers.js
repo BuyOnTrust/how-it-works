@@ -52,4 +52,34 @@ export const MobileBrandChildren = ({ styles, currentImageIndex, brands }) => {
         };
     });
     return children;
-}
+};
+
+export const TitleText = ({ text, isMobile }) => (
+    <div style={{
+        fontSize: '1.25rem',
+        fontWeight: 600,
+        lineHeight: '1.25',
+        marginBottom: '10px'
+    }}>
+        {text}
+    </div>
+);
+
+export const ContentText = ({ text, isMobile }) => (
+    <div style={{
+        fontSize: '0.9rem',
+        fontWeight: 300,
+        paddingBottom: '25px',
+        lineHeight: '1.25'
+    }}>
+        {text}
+    </div>
+);
+
+export const FinePrint = ({ text }) => (
+    <div style={{
+        fontSize: '0.5rem'
+    }}>
+        {text}
+    </div>
+)
