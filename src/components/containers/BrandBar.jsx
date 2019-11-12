@@ -1,29 +1,28 @@
 import React from 'react';
 
-// import ReactSVG from 'react-svg';
+import Carousel from '../shared/Carousel';
 
 const BrandBar = ({ styles }) => {
     const BrandBarStyle = {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        minWidth: "100vw",
-        height: "100px",
-        backgroundColor: "rgb(0,37,52)",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minWidth: '100vw',
+        height: 'auto',
+        backgroundColor: 'rgb(0,37,52)',
         color: styles.white()
     };
 
     const brandbarTitle = {
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
+        padding: '10px 0'
     };
 
     return (
         <div style={BrandBarStyle}>
             <span style={brandbarTitle}>Get all of the top brands</span>
-            <div>
-                Brand Carousel
-            </div>
+            <Carousel styles={styles} />
         </div>
     )
 }
