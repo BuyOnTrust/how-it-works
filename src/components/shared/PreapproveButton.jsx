@@ -7,7 +7,7 @@ const PreapproveButton = ({ styles }) => {
         alignItems: "center",
         minWidth: "100vw",
         fontWeight: "bold",
-        padding: "20px",
+        padding: "40px 20px",
         boxSizing: "border-box"
     };
 

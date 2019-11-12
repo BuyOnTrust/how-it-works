@@ -43,16 +43,16 @@ class App extends Component {
       approvalButtonWidth: windowWidth < 500 ? "90vw" : "350px",
       approvalButtonHeight: 60,
       showHeroPhone: windowWidth > 500,
-      isMobile: windowWidth < 500
+      isMobile: windowWidth < 500,
+      width: "100vw",
     };
 
     return (
       <div className="App"
         style={{
+          ...styles,
           backgroundColor: styles.white(),
           minHeight: "100vh",
-          minWidth: "100vw",
-          position: "relative"
         }}
       >
         <Header styles={styles} />

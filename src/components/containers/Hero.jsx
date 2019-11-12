@@ -20,8 +20,10 @@ const Hero = ({ styles }) => {
     const topText = {
         textAlign: "center",
         fontWeight: "600",
-        fontSize: "1.2rem",
-        padding: "10px 0"
+        fontSize: "1.1rem",
+        padding: "10px 0",
+        lineHeight: '1.1',
+        marginBottom: '10px'
     };
 
     const lowerText = {

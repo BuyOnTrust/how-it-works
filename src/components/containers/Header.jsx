@@ -8,16 +8,13 @@ const Header = ({styles}) => {
     const topBarStyle = {
         position: "fixed",
         top: 0,
-        display: "flex",
+        display: "inline-flex",
         justifyContent: styles.showHeaderPhone ? "space-between" : "center",
         alignItems: "center",
-        width: "100%",
+        width: 'calc(100vw - 40px)',
         height: styles.topBarHeight,
-        maxWidth: "100vw",
         backgroundColor: styles.white(),
-        fontWeight: "bold",
-        padding: "0px 20px",
-        boxSizing: "border-box"
+        padding: "0px 20px"
     };
 
     return (
@@ -31,7 +28,7 @@ const Header = ({styles}) => {
                 fallback={() => <span>Error!</span>}
                 loading={() => <span>Loading</span>}
             />
-            {styles.showHeaderPhone ? (<Phone styles={styles} />) : ('')}
+            {styles.showHeaderPhone ? (<Phone />) : ('')}
         </div>
     )
 }

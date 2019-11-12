@@ -5,7 +5,8 @@ import PreapproveButton from '../shared/PreapproveButton';
 
 const HowTo = ({ styles }) => {
     const howToStyle = {
-        padding: '10px'
+        padding: '10px',
+        textAlign: styles.isMobile ? 'left' : 'center'
     };
 
     return (
@@ -20,7 +21,7 @@ const HowTo = ({ styles }) => {
             }}>
                 <Steps styles={styles} />
                 <div style={{
-                    marginTop: '10px',
+                    marginTop: '60px',
                     marginBottom: '10px'
                 }}>
                     <PreapproveButton styles={styles} />

@@ -69,8 +69,10 @@ export const ContentText = ({ text, isMobile }) => (
     <div style={{
         fontSize: '0.9rem',
         fontWeight: 300,
-        paddingBottom: '25px',
-        lineHeight: '1.25'
+        marginBottom: '60px',
+        lineHeight: '1.25',
+        paddingLeft: '15px',
+        paddingRight: '15px',
     }}>
         {text}
     </div>
@@ -78,7 +80,8 @@ export const ContentText = ({ text, isMobile }) => (
 
 export const FinePrint = ({ text }) => (
     <div style={{
-        fontSize: '0.5rem'
+        fontSize: '0.5rem',
+        marginBottom: '50px'
     }}>
         {text}
     </div>

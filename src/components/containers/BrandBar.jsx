@@ -12,7 +12,8 @@ const BrandBar = ({ styles }) => {
         height: 'auto',
         backgroundColor: 'rgb(0,37,52)',
         color: styles.white(),
-        padding: '10px 0 0 0'
+        padding: '10px 0 0 0',
+        marginBottom: '60px'
     };
 
     const brandbarTitle = {

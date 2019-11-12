@@ -18,6 +18,7 @@ const MakeMobileSteps = () => {
     stepsArray.map((step, i) => {
         stepElements.push(
             <ReactSVG 
+                key={i}
                 src={step.src}
                 fallback={() => <span>Error!</span>}
                 loading={() => <span>Loading</span>}
@@ -30,9 +31,17 @@ const MakeMobileSteps = () => {
 }
 
 const Steps = ({ styles }) => {
+    const mobileSteps = {
+        display: 'flex', 
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    };
 
     return ( styles.isMobile ? 
-        <MakeMobileSteps />
+        <div style={mobileSteps}>
+            <MakeMobileSteps />
+        </div>        
      : 
         <div>
             WebSteps
