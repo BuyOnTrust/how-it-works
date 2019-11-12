@@ -11,13 +11,14 @@ const BrandBar = ({ styles }) => {
         minWidth: '100vw',
         height: 'auto',
         backgroundColor: 'rgb(0,37,52)',
-        color: styles.white()
+        color: styles.white(),
+        padding: '10px 0 0 0'
     };
 
     const brandbarTitle = {
         textTransform: 'uppercase',
         fontSize: '0.8rem',
-        padding: '10px 0'
+        fontWeight: 500
     };
 
     return (
