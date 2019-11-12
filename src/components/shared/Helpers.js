@@ -56,10 +56,11 @@ export const MobileBrandChildren = ({ styles, currentImageIndex, brands }) => {
 
 export const TitleText = ({ text, isMobile }) => (
     <div style={{
-        fontSize: '1.25rem',
+        fontSize: '1.5rem',
         fontWeight: 600,
         lineHeight: '1.25',
-        marginBottom: '10px'
+        marginBottom: '10px',
+        maxWidth: '550px'
     }}>
         {text}
     </div>
@@ -73,6 +74,7 @@ export const ContentText = ({ text, isMobile }) => (
         lineHeight: '1.25',
         paddingLeft: '15px',
         paddingRight: '15px',
+        maxWidth: '600px'
     }}>
         {text}
     </div>

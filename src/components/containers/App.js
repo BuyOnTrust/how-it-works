@@ -4,6 +4,7 @@ import Hero from './Hero';
 import BrandBar from './BrandBar';
 import HowTo from './HowTo';
 import Benefits from './Benefits';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -38,7 +39,7 @@ class App extends Component {
       white: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       black: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
       topBarHeight: 50,
-      footerMenuHeight: 50,
+      footerHeight: 150,
       showHeaderPhone: windowWidth < 500,
       approvalButtonWidth: windowWidth < 500 ? "90vw" : "350px",
       approvalButtonHeight: 60,
@@ -50,7 +51,6 @@ class App extends Component {
     return (
       <div className="App"
         style={{
-          ...styles,
           backgroundColor: styles.white(),
           minHeight: "100vh",
         }}
@@ -60,6 +60,7 @@ class App extends Component {
         <BrandBar styles={styles} />
         <HowTo styles={styles} />
         <Benefits styles={styles} />
+        {windowWidth > 500 ? <Footer styles={styles} /> : (null)}
       </div>
     );
   }

@@ -6,7 +6,10 @@ import PreapproveButton from '../shared/PreapproveButton';
 const HowTo = ({ styles }) => {
     const howToStyle = {
         padding: '10px',
-        textAlign: styles.isMobile ? 'left' : 'center'
+        textAlign: styles.isMobile ? 'left' : 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     };
 
     return (

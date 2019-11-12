@@ -1,25 +1,25 @@
 import React from 'react';
 
-const PreapproveButton = ({ styles }) => {
+const PreapproveButton = ({ styles, isOffset = false }) => {
     const buttonContainerStyle = {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minWidth: "100vw",
-        fontWeight: "bold",
-        padding: "40px 20px",
-        boxSizing: "border-box"
+        display: 'flex',
+        justifyContent: isOffset ? 'flex-start' : 'center',
+        alignItems: 'center',
+        minWidth: isOffset ? '22vw' : '100vw',
+        fontWeight: 'bold',
+        padding: '40px 20px',
+        boxSizing: 'border-box'
     };
 
     const buttonStyle = {
         width: styles.approvalButtonWidth,
         height: styles.approvalButtonHeight,
-        backgroundColor: "rgb(35, 160, 221)",
+        backgroundColor: 'rgb(35, 160, 221)',
         borderRadius: 50,
-        textTransform: "uppercase",
+        textTransform: 'uppercase',
         color: styles.white(),
-        fontSize: "1rem",
-        fontWeight: "bold"
+        fontSize: '1rem',
+        fontWeight: 'bold'
     }
 
     return (
