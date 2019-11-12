@@ -19,7 +19,7 @@ const PreapproveButton = ({ styles, isOffset = false }) => {
         textTransform: 'uppercase',
         color: styles.white(),
         fontSize: '1rem',
-        fontWeight: 'bold'
+        fontWeight: 600
     }
 
     return (

@@ -18,16 +18,16 @@ class App extends Component {
   
   componentDidMount = () => {
     this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions);
+    window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener("resize", this.updateDimensions);
+    window.removeEventListener('resize', this.updateDimensions);
   }
 
   updateDimensions = () => {
-    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-    let windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
+    let windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
+    let windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
 
     this.setState({ windowWidth, windowHeight });
   }
@@ -41,18 +41,18 @@ class App extends Component {
       topBarHeight: 50,
       footerHeight: 150,
       showHeaderPhone: windowWidth < 500,
-      approvalButtonWidth: windowWidth < 500 ? "90vw" : "350px",
-      approvalButtonHeight: 60,
+      approvalButtonWidth: windowWidth < 500 ? '90vw' : '350px',
+      approvalButtonHeight: 55,
       showHeroPhone: windowWidth > 500,
       isMobile: windowWidth < 500,
-      width: "100vw",
+      width: '100vw',
     };
 
     return (
-      <div className="App"
+      <div className='App'
         style={{
           backgroundColor: styles.white(),
-          minHeight: "100vh",
+          minHeight: '100vh',
         }}
       >
         <Header styles={styles} />
