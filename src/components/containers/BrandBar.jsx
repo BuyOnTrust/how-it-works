@@ -16,6 +16,7 @@ const BrandBar = ({ styles }) => {
 
     const brandbarTitle = {
         textTransform: 'uppercase',
+        fontSize: '0.8rem',
         padding: '10px 0'
     };
 

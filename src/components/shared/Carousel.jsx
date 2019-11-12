@@ -17,6 +17,7 @@ const brands = [
     {text: 'Dell', icon: dell}, 
     {text: 'Best Buy', icon: bestbuy}
 ]
+
 const ImageSlide = ({ title, src, styles }) => {
     return (
         <div className={`brand-icon ${title}`}>
@@ -99,9 +100,21 @@ class Carousel extends Component {
 
         const carouselStyle = {
             display: 'inline-flex',
-            width: '100%',
-            padding: '15px 0'
+            alignItems: 'center',            
+            justifyContent: 'space-between',
+            minWidth: 'calc(100vw - 40px)',
+            height: '75px',
+            // paddingBottom: '15px',
+            paddingLeft: '20px',
+            paddingRight: '20px',
         };
+
+        const carouselStyleWeb = {
+            display: 'inline-flex',
+            justifyContent: 'space-around',
+            width: '100%',
+        };
+
         return (
             <div>
                 {styles.isMobile ? (
@@ -118,7 +131,11 @@ class Carousel extends Component {
                             src={down_carrot}
                         />
                     </div>
-                ) : null} 
+                ) : (
+                    <div style={carouselStyleWeb}>
+                        
+                    </div>
+                )} 
             </div>
         )
         
