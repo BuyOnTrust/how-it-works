@@ -15,9 +15,16 @@ const Footer = ({ styles }) => {
         padding: "0px 20px"
     };
 
+    const flexContainer = {
+        margin: '10px',
+        backgroundColor: styles.white(0.5),
+    };
+
     return (
         <div style={footerStyle}>
-            Footer
+            <div style={flexContainer} >
+                container
+            </div>
         </div>
     )
 }
