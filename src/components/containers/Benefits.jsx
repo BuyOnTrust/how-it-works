@@ -10,11 +10,17 @@ const Benefits = ({ styles }) => {
         marginTop: '30px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: styles.isMobile ? 'flex-start' : 'center'
+        alignItems: styles.isMobile ? 'flex-start' : 'center',
+        justifyContent: 'center',
+        textAlign: 'center'
     };
 
     const titleShift = {
-        textAlign: styles.isMobile ? 'left' : 'center'
+        textAlign: styles.isMobile ? 'left' : 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
     };
     
     const benefit = {
@@ -37,13 +43,13 @@ const Benefits = ({ styles }) => {
     };
     
     const rightContainer = {
-        minHeight: '500px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
         padding: '50px 0',
-        flex: 1
+        flex: 1,
+        maxWidth: '400px'
     };
 
     const webBenefitsContainer = {
@@ -54,21 +60,21 @@ const Benefits = ({ styles }) => {
     return (
         <div style={BenefitsStyle}>
             <div className='benefit-title' style={titleShift}>
-                <TitleText text='Finance On Your Terms, With Flexible Payment Options' />
+                <TitleText text='Finance On Your Terms, With Flexible Payment Options' style={{textAlign: 'center', margin: 0}} />
                 <ContentText text={'With an initial payment of just $50, you can afford to shop from all the top brand names. Don\'t wait, find out how much you qualify for right now!'} />
             </div>
             {styles.isMobile ? (
                 <div>
                     <div className='benefit' style={benefit}>
-                        <TitleText text='SIMPLICITY' />
+                        <TitleText text='SIMPLICITY' isOffset />
                         <ContentText text={'Payoff within 90 days and you can simply close your account for the amount financed + $10.'} />
                     </div>
                     <div className='benefit' style={benefit}>
-                        <TitleText text='AFFORDABILITY' />
+                        <TitleText text='AFFORDABILITY' isOffset />
                         <ContentText text={'Payoff within 90 days and you can simply close your account for the amount financed + $10.'} />
                     </div>
                     <div className='benefit' style={benefit}>
-                        <TitleText text='FLEXIBILITY' />
+                        <TitleText text='FLEXIBILITY' isOffset />
                         <ContentText text={'Payoff over 12 months and get a flexible payment schedule timed to your payroll dates.'} />
                     </div>
                     <img src={phone_cart} alt='shopping-cart-img' style={{ width: '100%' }}/>
@@ -93,7 +99,7 @@ const Benefits = ({ styles }) => {
                                 <TitleText text='FLEXIBILITY' isOffset />
                                 <ContentText text={'Payoff over 12 months and get a flexible payment schedule timed to your payroll dates.'} isOffset />
                             </div>
-                            <PreapproveButton styles={styles} isOffset={true} />  
+                            <PreapproveButton styles={styles} isOffset />  
                         </div>
                     </div>
                     <FinePrint text={'*This estimated payment is only an estimate. Not all applicants are approved or qualify for these terms. Actual terms will be in the lease agreement. Not available in MN, NJ, WI & WY.'} />

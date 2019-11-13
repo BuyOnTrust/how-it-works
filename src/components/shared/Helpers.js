@@ -8,7 +8,7 @@ export const ImageSlider = ({ title, src, styles }) => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: '0.5rem'
+        fontSize: '0.75rem'
     };
 
     return (
@@ -27,10 +27,9 @@ export const Arrow = ({ direction, clickFunction, src }) => (
     <div
         className={`slide-arrow ${direction}`}
         onClick={clickFunction}>
-        <ReactSVG
+        <img
             src={src}
-            fallback={() => <span>Error!</span>}
-            loading={() => <span>Loading</span>}
+            alt={`arrow ${direction}`}
         />
     </div>
 );
@@ -54,13 +53,13 @@ export const MobileBrandChildren = ({ styles, currentImageIndex, brands }) => {
     return children;
 };
 
-export const TitleText = ({ text, isOffset }) => (
+export const TitleText = ({ text, isMobile, isOffset = false }) => (
     <div style={{
-        fontSize: isOffset ? '1.2rem' : '1.5rem',
+        fontSize: isMobile || isOffset ? '1.3rem' : '2rem',
         fontWeight: 600,
         lineHeight: '1.25',
         marginBottom: '10px',
-        maxWidth: '550px'
+        maxWidth: isMobile ? '550px' : '750px',
     }}>
         {text}
     </div>
@@ -68,13 +67,13 @@ export const TitleText = ({ text, isOffset }) => (
 
 export const ContentText = ({ text, isOffset = false }) => (
     <div style={{
-        fontSize: isOffset ? '0.75rem' : '0.9rem',
-        fontWeight: 300,
+        fontSize: isOffset ? '0.8rem' : '1rem',
+        fontWeight: 400,
         marginBottom: isOffset ? '15px' : '60px',
-        lineHeight: '1.25',
+        lineHeight: isOffset ? '1.75' : '1.5',
         paddingLeft: '15px',
         paddingRight: '15px',
-        maxWidth: '600px'
+        maxWidth: '750px'
     }}>
         {text}
     </div>
@@ -83,7 +82,7 @@ export const ContentText = ({ text, isOffset = false }) => (
 export const FinePrint = ({ text }) => (
     <div style={{
         textAlign: 'center',
-        fontSize: '0.5rem',
+        fontSize: '0.8rem',
         marginBottom: '50px'
     }}>
         {text}

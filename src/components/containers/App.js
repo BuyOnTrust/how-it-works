@@ -42,7 +42,7 @@ class App extends Component {
       footerHeight: 150,
       showHeaderPhone: windowWidth < 500,
       approvalButtonWidth: windowWidth < 500 ? '90vw' : '350px',
-      approvalButtonHeight: 55,
+      approvalButtonHeight: 45,
       showHeroPhone: windowWidth > 500,
       isMobile: windowWidth < 500,
       width: '100vw',

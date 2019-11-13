@@ -14,7 +14,7 @@ const HowTo = ({ styles }) => {
 
     return (
         <div style={howToStyle}>
-            <TitleText text='Wondering how this whole thing works?' />
+            <TitleText text='Wondering how this whole thing works?' isMobile={styles.isMobile} />
             <ContentText text={'With an initial payment of just $50, you can afford to shop from all the top brand names. Don\'t wait, find out how much you qualify for right now!'} />
             <div style={{
                 display: 'flex',

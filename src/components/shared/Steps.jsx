@@ -1,9 +1,9 @@
 import React from 'react';
 
-import step1mobile from '../../assets/steps/step_1-mobile.svg';
-import step2mobile from '../../assets/steps/step_2-mobile.svg';
-import step3mobile from '../../assets/steps/step_3-mobile.svg';
-import step4mobile from '../../assets/steps/step_4-mobile.svg';
+import step1mobile from '../../assets/steps/1mobile.png';
+import step2mobile from '../../assets/steps/2mobile.png';
+import step3mobile from '../../assets/steps/3mobile.png';
+import step4mobile from '../../assets/steps/4mobile.png';
 import step1web from '../../assets/steps/1.png';
 import step2web from '../../assets/steps/2.png';
 import step3web from '../../assets/steps/3.png';
@@ -20,7 +20,7 @@ const MakeMobileSteps = () => {
     let stepElements = [];
     stepsArray.map((step, i) => {
         stepElements.push(
-            <img src={step.src} alt='step-img' />
+            <img src={step.src} alt='step-img' style={{marginBottom: '10px'}}/>
         )
         return(null)
     })
@@ -63,18 +63,18 @@ const Steps = ({ styles }) => {
         <div style={webSteps}>
             <div style={row}>
                 <div style={webStep}>                                   
-                    <img src={step1web} style={{ maxWidth: '45vw' }} alt='step-img' />
+                    <img src={step1web} style={{ maxWidth: '35vw' }} alt='step-img' />
                 </div> 
                 <div style={webStep}>
-                    <img src={step2web} style={{ maxWidth: '45vw' }} alt='step-img' />
+                    <img src={step2web} style={{ maxWidth: '35vw' }} alt='step-img' />
                 </div> 
             </div>
             <div style={row} >
                 <div style={webStep}>
-                    <img src={step3web} style={{ maxWidth: '45vw' }} alt='step-img' />
+                    <img src={step3web} style={{ maxWidth: '35vw' }} alt='step-img' />
                 </div> 
                 <div style={webStep}>
-                    <img src={step4web} style={{ maxWidth: '45vw' }} alt='step-img' />
+                    <img src={step4web} style={{ maxWidth: '35vw' }} alt='step-img' />
                 </div> 
             </div>
         </div>        

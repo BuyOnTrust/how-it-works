@@ -24,7 +24,7 @@ const Header = ({styles}) => {
                 src={BOT_logo}
                 beforeInjection={svg => {
                     svg.classList.add('svg-icon')
-                    svg.setAttribute('style', 'width: 120px')
+                    svg.setAttribute('style', 'width: 160px')
                 }}
                 fallback={() => <span>Error!</span>}
                 loading={() => <span>Loading</span>}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import arrow_left from '../../assets/icons/arrow_left.svg';
-import arrow_right from '../../assets/icons/arrow_right.svg';
+import arrow_left from '../../assets/icons/arrow_left.png';
+import arrow_right from '../../assets/icons/arrow_right.png';
 import apple from '../../assets/brands/apple.svg';
 import samsung from '../../assets/brands/samsung.svg';
 import lg from '../../assets/brands/lg.svg';
@@ -63,7 +63,7 @@ class Carousel extends Component {
             height: '85px',
             paddingLeft: '20px',
             paddingRight: '20px',
-            width: '100%'
+            width: '100%',
         };
 
         return (

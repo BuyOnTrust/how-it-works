@@ -4,7 +4,7 @@ import ReactSVG from 'react-svg';
 import PreapproveButton from '../shared/PreapproveButton';
 import HeroPhone from '../shared/HeroPhone';
 
-import down_carrot from '../../assets/icons/down_carrot.svg';
+import down_carrot from '../../assets/icons/down_carrot.png';
 import BB_logo from '../../assets/logos/BB_logo.svg';
 import hero_img from '../../assets/images/hero_img.png';
 
@@ -19,26 +19,32 @@ const Hero = ({ styles }) => {
 
     const topText = {
         textAlign: "center",
-        fontWeight: "600",
-        fontSize: styles.isMobile ? "1.1rem" : "1.6rem",
+        fontWeight: "700",
+        fontSize: styles.isMobile ? "1.1rem" : "2.2rem",
         padding: "10px 0",
-        lineHeight: '1.1',
-        marginBottom: '10px'
+        lineHeight: styles.isMobile ? '1.5' : '1.1',
+        marginBottom: '10px',
+        marginTop: styles.isMobile ? '25px' : '0'
     };
 
     const lowerText = {
-        textAlign: "center",
-        fontWeight: "600",
-        fontSize: "1.4rem",
-        textTransform: "uppercase",
-        marginTop: "10px",
-        marginBottom:"-10px"
+        textAlign: 'center',
+        fontSize: styles.isMobile ? '1.1rem' : '2.2rem',
+        textTransform: 'uppercase',
+        marginTop: '10px',
+        fontWeight: '700'
     };
 
     const heroImg = {
         width: '90vw',
         maxWidth: '1200px',
         padding: '20px 0'
+    };
+
+    const carrotStyle = {
+        width: '25px',
+        height: 'auto',
+        marginTop: '10px'
     };
 
     return (
@@ -59,12 +65,13 @@ const Hero = ({ styles }) => {
             <div style={lowerText}>
                 No credit needed!
             </div>
-            <ReactSVG
+            {/* <ReactSVG
                 src={down_carrot}
                 fallback={() => <span>Error!</span>}
                 loading={() => <span>Loading</span>}
                 className="down-carrot-wrapper"
-            />
+            /> */}
+            <img src={down_carrot} alt='down-carrot' style={carrotStyle} />
             <PreapproveButton styles={styles} />
             {styles.showHeroPhone ? (<HeroPhone />) : ('')}
             <img src={hero_img} alt='hero-collage' style={heroImg} />

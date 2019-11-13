@@ -7,7 +7,7 @@ const PreapproveButton = ({ styles, isOffset = false }) => {
         alignItems: 'center',
         minWidth: isOffset ? '22vw' : '100vw',
         fontWeight: 'bold',
-        padding: '40px 20px',
+        padding: '25px',
         boxSizing: 'border-box'
     };
 
@@ -18,8 +18,8 @@ const PreapproveButton = ({ styles, isOffset = false }) => {
         borderRadius: 50,
         textTransform: 'uppercase',
         color: styles.white(),
-        fontSize: '1rem',
-        fontWeight: 600
+        fontSize: '0.8rem',
+        fontWeight: 700
     }
 
     const handleClick = () => {
