@@ -44,8 +44,8 @@ const Steps = ({ styles }) => {
 
     const row = {        
         display: 'flex',
-        justifyContent: 'space-around',
-        maxWidth: '90vw'
+        width: '100vw',
+        justifyContent: 'space-around'
     };
 
     const webSteps = {
@@ -53,7 +53,7 @@ const Steps = ({ styles }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        maxWidth: '90vw'
+        // maxWidth: '90vw'
     };
 
     const webStep = {

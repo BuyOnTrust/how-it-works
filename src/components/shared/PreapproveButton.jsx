@@ -22,9 +22,17 @@ const PreapproveButton = ({ styles, isOffset = false }) => {
         fontWeight: 600
     }
 
+    const handleClick = () => {
+        if (typeof showOptinModal === 'function') {
+            window.showOptinModal();
+        } else {
+            console.log('PreApproval button clicked!...but showOptinModal() is not within scope.')
+        }
+    }
+
     return (
         <div style={buttonContainerStyle}>
-            <button style={buttonStyle}>Click here to get pre-qualified</button>
+            <button style={buttonStyle} onClick={handleClick}>Click here to get pre-qualified</button>
         </div>
     )
 }
