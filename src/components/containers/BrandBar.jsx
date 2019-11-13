@@ -8,7 +8,7 @@ const BrandBar = ({ styles }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        minWidth: '101%',
+        minWidth: '100vw',
         height: 'auto',
         backgroundColor: 'rgb(0,37,52)',
         color: styles.white(),

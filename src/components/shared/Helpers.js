@@ -82,6 +82,7 @@ export const ContentText = ({ text, isOffset = false }) => (
 
 export const FinePrint = ({ text }) => (
     <div style={{
+        textAlign: 'center',
         fontSize: '0.5rem',
         marginBottom: '50px'
     }}>

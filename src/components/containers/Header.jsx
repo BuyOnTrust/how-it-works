@@ -14,7 +14,8 @@ const Header = ({styles}) => {
         width: 'calc(100vw - 40px)',
         height: styles.topBarHeight,
         backgroundColor: styles.white(),
-        padding: "0px 20px"
+        padding: "0px 20px",
+        zIndex: '1000'
     };
 
     return (

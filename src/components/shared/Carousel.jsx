@@ -57,16 +57,17 @@ class Carousel extends Component {
 
         const carouselStyle = {
             display: 'inline-flex',
-            alignItems: 'center',            
+            alignItems: 'center',       
             justifyContent: styles.isMobile ? 'space-between' : 'space-around',
-            minWidth: 'calc(100vw - 40px)',
+            maxWidth: styles.isMobile ? '90vw' : '1100px',
             height: '85px',
             paddingLeft: '20px',
             paddingRight: '20px',
+            width: '100%'
         };
 
         return (
-            <div className='carousel-container'>
+            <div className='carousel-container' style={{width: '100vw', display: 'flex', justifyContent: 'center'}}>
                 {styles.isMobile ? (
                     <div style= { carouselStyle }>
                         <Arrow
@@ -84,7 +85,7 @@ class Carousel extends Component {
                 ) : (
                     <div style={carouselStyle}>
                         {brands.map((brand, i) => {
-                            return (<ImageSlider key={i} title={brand.text} src={brand.icon} styles={this.props.styles} />)
+                            return (<ImageSlider key={i} title={brand.text} src={brand.icon} styles={this.props.styles} style={{margin: '30px'}}/>)
                         })}
                     </div>
                 )} 

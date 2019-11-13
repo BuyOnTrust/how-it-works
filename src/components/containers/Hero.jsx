@@ -20,7 +20,7 @@ const Hero = ({ styles }) => {
     const topText = {
         textAlign: "center",
         fontWeight: "600",
-        fontSize: "1.1rem",
+        fontSize: styles.isMobile ? "1.1rem" : "1.6rem",
         padding: "10px 0",
         lineHeight: '1.1',
         marginBottom: '10px'
@@ -37,6 +37,7 @@ const Hero = ({ styles }) => {
 
     const heroImg = {
         width: '90vw',
+        maxWidth: '1200px',
         padding: '20px 0'
     };
 

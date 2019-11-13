@@ -1,14 +1,13 @@
 import React from 'react';
-import ReactSVG from 'react-svg';
 
 import step1mobile from '../../assets/steps/step_1-mobile.svg';
 import step2mobile from '../../assets/steps/step_2-mobile.svg';
 import step3mobile from '../../assets/steps/step_3-mobile.svg';
 import step4mobile from '../../assets/steps/step_4-mobile.svg';
-import step1web from '../../assets/steps/1.svg';
-import step2web from '../../assets/steps/2.svg';
-import step3web from '../../assets/steps/3.svg';
-import step4web from '../../assets/steps/4.svg';
+import step1web from '../../assets/steps/1.png';
+import step2web from '../../assets/steps/2.png';
+import step3web from '../../assets/steps/3.png';
+import step4web from '../../assets/steps/4.png';
 
 const stepsArray = [
     {src: step1mobile},
@@ -21,13 +20,7 @@ const MakeMobileSteps = () => {
     let stepElements = [];
     stepsArray.map((step, i) => {
         stepElements.push(
-            <ReactSVG 
-                key={i}
-                src={step.src}
-                fallback={() => <span>Error!</span>}
-                loading={() => <span>Loading</span>}
-                className="svg-step-wrapper"
-            />
+            <img src={step.src} alt='step-img' />
         )
         return(null)
     })
@@ -44,8 +37,8 @@ const Steps = ({ styles }) => {
 
     const row = {        
         display: 'flex',
-        width: '100vw',
-        justifyContent: 'space-around'
+        width: styles.isMobile ? '90vw' : '900px',
+        justifyContent: 'center',
     };
 
     const webSteps = {
@@ -53,11 +46,13 @@ const Steps = ({ styles }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        // maxWidth: '90vw'
+        width: '100%',
+        maxWidth: styles.isMobile ? '460px' : '1000px'
     };
 
     const webStep = {
-        margin: '10px'
+        margin: '10px',
+        position: 'relative'
     };
 
     return ( styles.isMobile ? 
@@ -67,39 +62,19 @@ const Steps = ({ styles }) => {
      : 
         <div style={webSteps}>
             <div style={row}>
-                <div style={webStep}>
-                    <ReactSVG                        
-                        src={step1web}
-                        fallback={() => <span>Error!</span>}
-                        loading={() => <span>Loading</span>}
-                        className="svg-step-wrapper"                        
-                    />                    
+                <div style={webStep}>                                   
+                    <img src={step1web} style={{ maxWidth: '45vw' }} alt='step-img' />
                 </div> 
                 <div style={webStep}>
-                    <ReactSVG
-                        src={step2web}
-                        fallback={() => <span>Error!</span>}
-                        loading={() => <span>Loading</span>}
-                        className="svg-step-wrapper"
-                    />                     
+                    <img src={step2web} style={{ maxWidth: '45vw' }} alt='step-img' />
                 </div> 
             </div>
             <div style={row} >
                 <div style={webStep}>
-                    <ReactSVG
-                        src={step3web}
-                        fallback={() => <span>Error!</span>}
-                        loading={() => <span>Loading</span>}
-                        className="svg-step-wrapper"
-                    />                     
+                    <img src={step3web} style={{ maxWidth: '45vw' }} alt='step-img' />
                 </div> 
                 <div style={webStep}>
-                    <ReactSVG
-                        src={step4web}
-                        fallback={() => <span>Error!</span>}
-                        loading={() => <span>Loading</span>}
-                        className="svg-step-wrapper"
-                    /> 
+                    <img src={step4web} style={{ maxWidth: '45vw' }} alt='step-img' />
                 </div> 
             </div>
         </div>        
