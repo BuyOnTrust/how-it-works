@@ -53,9 +53,9 @@ export const MobileBrandChildren = ({ styles, currentImageIndex, brands }) => {
     return children;
 };
 
-export const TitleText = ({ text, isMobile, isOffset = false, styles }) => (
+export const TitleText = ({ text, isMobile, isOffset = false }) => (
     <div style={{
-        fontSize: styles.isMobile || isMobile || isOffset ? '1.3rem' : '2rem',
+        fontSize: isMobile || isOffset ? '1.3rem' : '2rem',
         fontWeight: 600,
         lineHeight: '1.25',
         marginBottom: '10px',

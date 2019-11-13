@@ -60,7 +60,7 @@ const Benefits = ({ styles }) => {
     return (
         <div style={BenefitsStyle}>
             <div className='benefit-title' style={titleShift}>
-                <TitleText text='Finance On Your Terms, With Flexible Payment Options' styles={styles} style={{textAlign: 'center', margin: 0}} />
+                <TitleText text='Finance On Your Terms, With Flexible Payment Options' isMobile={styles.isMobile} style={{textAlign: 'center', margin: 0}} />
                 <ContentText text={'With an initial payment of just $50, you can afford to shop from all the top brand names. Don\'t wait, find out how much you qualify for right now!'} />
             </div>
             {styles.isMobile ? (
